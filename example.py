@@ -43,16 +43,30 @@ print('power 7, what is in closure',
 
 
 # Example for training
-
+'''
 def outer():
     a = 0
 
     def inner():
         nonlocal a
+        b = a
+        b += 1
+        return b
+
+    return inner
+'''
+
+def outer2():
+    a = 0
+
+    def inner():
+        nonlocal a
+        result = a
         a += 1
-        return a
+
+        return result
 
     return inner
 
-b = outer()
-print(b)
+c = outer2()
+print(c)
