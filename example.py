@@ -40,3 +40,19 @@ print('power 4, what is in closure',
 print(power_7(2))
 print('power 7, what is in closure',
       power_7.__closure__[0].cell_contents)
+
+
+# Example for training
+
+def outer():
+    a = 0
+
+    def inner():
+        nonlocal a
+        a += 1
+        return a
+
+    return inner
+
+b = outer()
+print(b)
