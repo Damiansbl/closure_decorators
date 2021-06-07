@@ -70,4 +70,17 @@
 1. Create function using closure
 2. Ad annotation with at and name of decorator above decorated function
 
+##Rules
+- you can use multiple decorators to decorate one function
+- order of decoration is from nearest decorated function to furthest
+- you can pass parameter to decorator using double closure in declaration
+- order of parameters in double closure:
+   - parameter of decorator
+   - decorated function
+   - parameters of decorated function
+   
+
+
+# Dictionary
+- iPython - interactive python
 
